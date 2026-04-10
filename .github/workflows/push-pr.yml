@@ -18,5 +18,10 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v6.0.2
 
+        - name: Install dependencies
+          run: npm install
+          working-directory: ./src
+
         - name: Run Tests
           run: npm test
+          working-directory: ./src
