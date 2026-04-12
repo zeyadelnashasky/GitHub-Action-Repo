@@ -10,9 +10,9 @@ jobs:
           os: [ubuntu-latest, windows-latest, macos-latest]
           node_version: [14.x, 15.x, 16.x]
   
-     runs-on: ${{ matrix.os }}
-     steps:
-       - name: setup Nodejs environment on Runners
-         uses: actions/setup-node@v6.3.0
-         with:
-           node-version: ${{ matrix.node_version }}
+    runs-on: ${{ matrix.os }}
+    steps:
+     - name: setup Nodejs environment on Runners
+       uses: actions/setup-node@v6.3.0
+       with:
+          node-version: ${{ matrix.node_version }}
